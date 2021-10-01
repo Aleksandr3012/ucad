@@ -1,0 +1,23 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Home page
+
+			+e.sliderWrap
+				.swiper.mySwiper
+					.swiper-wrapper
+						mixin slide
+							+e.slide.swiper-slide 
+								+e.imgWrap 
+									img(src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="" loading="lazy")
+								+e.txt Lorem.
+								+e.title Lorem ipsum dolor sit amet.
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+				+arrow
+	// end headerBlock

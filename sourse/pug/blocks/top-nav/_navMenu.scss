@@ -1,0 +1,22 @@
+.menu{
+	display: flex;
+	text-align: center;
+	@include roww(20px);
+	flex-wrap: wrap;
+	list-style: none;
+	position: relative;
+	margin-bottom: 0;
+	max-width: 100%;
+	@include roww(20px, m);
+	li{
+		
+		// margin-left: 0;
+		// margin-right: 0;
+		padding: 0;
+	}
+	a{
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+	}
+}

@@ -1,0 +1,16 @@
+
+	// start .header
+	.header {
+		position: sticky;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+	
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.header

@@ -1,0 +1,41 @@
+.top-nav {
+
+	background-color: $primary;
+	padding-top: rem(10);
+	padding-bottom: rem(10);
+	overflow: hidden;
+
+	&__logo {
+		color: #fff;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: $h3-font-size;
+		line-height: 1;
+		@include media-breakpoint-up(sm) {
+			font-size: $h1-font-size;
+		}
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	.row {
+		--bs-gutter-x: #{rem(30)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(60)};
+		}
+	}
+
+	@include mt;
+	&.fixed {
+	}
+
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-down(xs) {}
+}
+
+

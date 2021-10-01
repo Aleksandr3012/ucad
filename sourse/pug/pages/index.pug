@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'UCAD'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+headerBlock()
+	+footer()
+
+
+
+

@@ -1,0 +1,26 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Product page
+				
+			.row
+				mixin item(i)
+					.col-6.col-sm-4.col-lg-3
+						+e.item(href='#')
+							+e.imgWrap 
+								+pic(`${i}.jpg`,'','')
+							+e.txtWrap 
+								+e.txt Lorem.
+								+e.title Lorem ipsum dolor sit amet consectetur adipisicing.
+				+item('hMyT4CDXR')
+				+item('BJa4kxc4X')
+				+item('hMyT4CDXR')
+				+item('BJa4kxc4X')
+				+item('hMyT4CDXR')
+				+item('BJa4kxc4X')
+				+item('hMyT4CDXR')
+				+item('BJa4kxc4X')
+
+	// end sCatalog
