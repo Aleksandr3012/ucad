@@ -22,9 +22,10 @@
 
 	@include media-breakpoint-up(xl) {
 		--swiperArrowSize: #{rem(68)};
-	}
-	--swiperArrowSize: #{rem(30)};
 		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+	}
+	--swiperArrowSize: #{rem(40)};
+	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) + #{rem(50)});
 		--swiperBorderColorDef: var(--bs-primary);
 		--swiperColorDef: var(--bs-primary);
 		--swiperBgDef: #ffffff;

@@ -59,7 +59,9 @@
 	&-hand {
 		display: grid;
 		place-items: center;
-		box-shadow: 2px 5px 10px 5px #acabab;
+		@include media-breakpoint-up(xl) {
+			box-shadow: 2px 5px 10px 5px #acabab;
+		}
 	}
 
 	&-disabled  {
