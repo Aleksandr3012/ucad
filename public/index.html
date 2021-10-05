@@ -7,7 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
-		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -40,48 +40,8 @@
 					<h1>Home page</h1>
 				</div>
 				<div class="headerBlock__sliderWrap">
-					<div class="swiper mySwiper">
-						<div class="swiper-wrapper">
-									<div class="headerBlock__slide swiper-slide"> 
-										<div class="headerBlock__imgWrap"> <img src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="" loading="lazy"/>
-										</div>
-										<div class="headerBlock__txt">Lorem.
-										</div>
-										<div class="headerBlock__title">Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-									<div class="headerBlock__slide swiper-slide"> 
-										<div class="headerBlock__imgWrap"> <img src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="" loading="lazy"/>
-										</div>
-										<div class="headerBlock__txt">Lorem.
-										</div>
-										<div class="headerBlock__title">Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-									<div class="headerBlock__slide swiper-slide"> 
-										<div class="headerBlock__imgWrap"> <img src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="" loading="lazy"/>
-										</div>
-										<div class="headerBlock__txt">Lorem.
-										</div>
-										<div class="headerBlock__title">Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-									<div class="headerBlock__slide swiper-slide"> 
-										<div class="headerBlock__imgWrap"> <img src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="" loading="lazy"/>
-										</div>
-										<div class="headerBlock__txt">Lorem.
-										</div>
-										<div class="headerBlock__title">Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-									<div class="headerBlock__slide swiper-slide"> 
-										<div class="headerBlock__imgWrap"> <img src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="" loading="lazy"/>
-										</div>
-										<div class="headerBlock__txt">Lorem.
-										</div>
-										<div class="headerBlock__title">Lorem ipsum dolor sit amet.
-										</div>
-									</div>
+					<div class="headerBlock__slider headerBlock__slider--js swiper">
+						<div class="swiper-wrapper" id="testList">
 						</div>
 					</div>
 					<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
@@ -94,6 +54,7 @@
 							<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
 						</svg>
 					</div>
+					<div class="swiper-pagination swiper-pagination-clickable"></div>
 				</div>
 			</div>
 		</div>
@@ -108,7 +69,7 @@
 				</div>
 			</div>
 		</footer>
-		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

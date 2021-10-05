@@ -6,18 +6,17 @@ mixin headerBlock()
 				h1 Home page
 
 			+e.sliderWrap
-				.swiper.mySwiper
-					.swiper-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper#testList
 						mixin slide
-							+e.slide.swiper-slide 
-								+e.imgWrap 
-									img(src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="" loading="lazy")
-								+e.txt Lorem.
-								+e.title Lorem ipsum dolor sit amet.
-						+slide
-						+slide
-						+slide
-						+slide
-						+slide
+							.swiper-slide 
+								+e.slide
+									+e.imgWrap 
+										img(src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="" loading="lazy")
+									+e.txt Lorem.
+									+e.title Lorem ipsum dolor sit amet.
+						//- -for (var i = 0; i < 8; i++)
+						//- 	+slide
 				+arrow
+				.swiper-pagination.swiper-pagination-clickable
 	// end headerBlock

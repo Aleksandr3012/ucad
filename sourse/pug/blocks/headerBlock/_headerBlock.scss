@@ -18,15 +18,19 @@
 	}
 
 	&__title {
+		margin-bottom: rem(5);
 		font-weight: bold;
 	}
 
 	&__imgWrap {
-		padding-bottom: rem(20);
+		margin-bottom: rem(20);
+		@include block(420,400);
+
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			@include a-cent;
 		}
 	}
 
@@ -34,6 +38,12 @@
 		color: rgba($color: #000000, $alpha: 0.5);
 		margin-bottom: rem(5);
 		font-size: $small;
+	}
+
+	.swiper-pagination {
+		bottom: 0;
+		position: static;
+		margin-top: rem(10);
 	}
 
 

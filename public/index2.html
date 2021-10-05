@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>threeJS Test</title>
+</head>
+
+<body>
+    <ul id='testList'></ul>
+</body>
+
+<style>
+    html, body { margin: 0; height: 100%; }
+</style>
+
+<script type="module">
+
+
+    /* Получаем данные по АПИ */
+    function getFromAPI(url, callback) {
+        var obj
+
+        fetch (url)
+            .then(res => res.json())
+            .then(data => obj = data)
+            .then(() => callback(obj))
+    }
+
+
+     /* Создаем 1 карточку или слайд и тд...  */
+    const createItem = data => {
+        const card = `<div class="slide-item">
+                        <h1>${data?.bred_for}</h1>
+                        <strong>${data?.breed_group}</strong>
+
+                        <img src="${data?.image?.url}" alt="${data?.name}" width="${data?.image.width}}" height="${data?.image.height}">
+
+                        <p>${data?.life_span}</p>
+
+                        <h2>${data?.name}</h2>
+
+                        <span>${data?.origin}</span>
+
+                        <p>${data.temperament}</p>
+                    </div>`
+
+        const liParrent = document.createElement('li')
+        liParrent.innerHTML = card
+
+        return liParrent
+    }
+
+    
+    /* Рисуем список карточек или слайдов и тд...  */
+    function drawList (arrOfObjs) {
+        arrOfObjs.map(item => {
+            return document.querySelector('#testList').append(createItem(item));
+        })
+    }
+
+    getFromAPI('https://api.thedogapi.com/v1/breeds?limit=10&page=0', drawList);
+  </script>
+</html>
